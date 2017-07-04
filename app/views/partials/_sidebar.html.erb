@@ -1,7 +1,8 @@
-<div>
-	<% image_tag "magnifying-glass.png" %>
-	<ul>
-		<li><% link_tag "Search", root_path %></li>
-		<li><% link_to "Favorites", favorites_path %></li>
-	</ul>
+<div class="sidebar-link">
+	<%= link_to image_tag("teachable-logo.png"), 'http://teachable.com' %>
 </div>
+
+<ul class="nav">
+	<li><%= link_to "Search", root_path %></li>
+	<li><%= link_to "Favorites", favorites_path %></li>
+</ul>

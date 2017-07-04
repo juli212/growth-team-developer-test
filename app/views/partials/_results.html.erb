@@ -1,0 +1,30 @@
+<% if result %>
+	<h6 class="gem-name gem">
+		<a href="https://rubygems.org/gems/<%= result['name']%>"><%= result["name"] %></a>
+		<div class="star-box">
+			<img src="assets/star-blue.png" class=" blue-star favorite-star" />
+			<img src="assets/star-gray.png" class=" gray-star favorite-star" />
+		</div>
+	</h6>
+
+	<h6>Information</h6>
+	<p><%= result["info"] %></p>
+
+	<h6>Dependencies</h6>
+	<% if dependencies.length > 0 %>
+		<ul class='results-list'>
+			<% dependencies.each do |d_name| %>
+			<li class="dependency-item gem">
+				<a href="https://rubygems.org/gems/<%= d_name %>" id="<%= d_name %>"><%= d_name %>
+				</a>
+				<div class="star-box">
+					<img src="assets/star-blue.png" class=" blue-star favorite-star" />
+					<img src="assets/star-gray.png" class="gray-star favorite-star" />
+				</div>
+			</li>
+			<% end %>
+		</ul>
+	<% else %>
+		<p>None</p>
+	<% end %>
+<% end%>
