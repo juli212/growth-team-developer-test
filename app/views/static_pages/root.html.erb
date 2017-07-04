@@ -1,1 +1,8 @@
-Please build the search page here.
+<h1>Search Gems</h1>
+
+<%= form_for @term, method: :post, url: search_path, html: { class: 'search-form'} do |f| %>
+ 	<%= f.text_field :term, placeholder: 'search' %><br />
+  <%= image_submit_tag("magnifying-glass.png") %>
+<% end %>
+
+<div class="search-results"></div>
